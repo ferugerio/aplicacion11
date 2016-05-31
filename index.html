@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Primera Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="js/tema11a.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/Javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/esquites.png','imagenes/39066691.png','imagenes/descarga.png','imagenes/3396196146_c3183bcf82_b.png')">
+<div data-role="page" id="Principal" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+<h1>Turismo de Atlixco</h1>
+</div>
+<div data-role="main" class="ui-content">
+<div>
+  <div align="center"><img src="imagenes/logo1.png" width="722" height="243"></div>
+</div>
+<div data-role="collapsible" data-content-theme="false">
+<h1>Atlixco Pueblo Magico</h1>
+<div>
+<p>Se localiza a 25 kilómetros de la ciudad de Puebla, capital de la entidad homónima y tiene dos relevantes vías de ingreso, la carretera federal 190 y la más actual Autopista Vía Atlixcáyotl.</p>
+<p>En la actualidad, es una dinámica ciudad con una población superior a los cien mil habitantes, los cuales han conseguido combinar un notable crecimiento urbano con una vasta herencia de arquitectura novohispana, creada por los fundadores del lugar. Actualmente estos edificios históricos integran uno de los atractivos más importantes de este Pueblo Mágico.</p>
+<div align="center"><img src="imagenes/MCIlhmc3.png"></div>
+<p>Un paseo por el zócalo de Atlixco es una vivencia magnífica, ya que los visitantes pueden degustar deliciosos helados o bien ricos platillos en alguno de los muchos restaurantes que allí se ubican. Es aconsejable saborear la cecina de Atlixco, el consomé, o truchas preparadas en las versiones más variadas.</p>
+<p>Atlixco es un gran productor agrícola  reconocido tanto a nivel nacional como internacional por su gran variedad y calidad de árboles ornamentales y frutales, así como de plantas y flores para huerto o decoración.</p>
+Mas informacion:<a href="http://turismoatlixco.com/">http://turismoatlixco.com/</a>
+<br>
+<h1 align="center">¿Como llegar a Atlixco?</h1>
+<p>El municipio colinda al norte con el municipio de Tanguismanalco, al noreste con los municipios de Santa Isabel Cholula y Ocoyucan, al suroeste con el municipio de Atzitzihuacan, al sur con los municipios de Huaquechula y Tepeojuma, sureste con el municipios de San Diego la Meza Tochimiltzingo, al este con la Ciudad de Puebla, y al oeste con el municipio de Tochimilco.</p>
+<iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60393.80780123439!2d-98.48145301254331!3d18.904242717533847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfb3eee015f935%3A0x5c4b12a3f9f700e7!2sAtlixco%2C+Pue.!5e0!3m2!1ses-419!2smx!4v1447702271932" width="700" height="400" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</div>
+</div>
+</div>
+
+<div>
+<ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Lugares Turisticos</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Floricultura </h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Tradiciones</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Gastronomia</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Diseñado por</h2>
+</a>
+</li>
+</ul>
+</div>
+  <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+      <h4>&quot;Turismo de Atlixco&quot;</h4>
+</div>
+  </div>
+  </div>
+  
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>Lugares Turisticos</h1>
+ </div>
+<div data-role="collapsible" data-content-theme="false">
+<h1>Capilla de San Miguel</h1>
+<div>
+<p align="left">Esta capilla se construyo en el siglo XVIII, se encuentra ubicada en la cima del cerro de San Miguel.</p>
+
+<p align="left">Esta fiesta llega a coincidir con la fecha del Atlixcayotl (último domingo de septiembre), pero hay que recalcar que son dos eventos totalmente diferentes.</p>
+
+<p align="left">Su construcción es de tipo popular y muy pintoresca, consta de una puerta de madera grande, ventana, un nicho, todo encuadrado por dos contrafuertes y pintada en amarillo y blanco por vieja tradición.</p>
+
+<p align="left">La Capilla se encuentra en una explanada cuya barda de aproximadamente un metro de alto permite ver la Ciudad y todo el valle de Atlixco.</p>
+<div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image28','','imagenes/39066691.png',1)"><img src="imagenes/atlixco_de_las_flores_5_20131029_1313266179.png" width="448" height="336" id="Image28"></a>
+</div>
+<p align="left">Cada 29 de septiembre la Capilla de San Miguel recibe a cientos de fieles que acuden con motivo de la fiesta del Arcángel San Miguel y disfrutan de la romería y antojitos típicos de la región.</p>
+
+<p align="left">Ocho días antes de la fecha indicada, se sube la escultura del Arcángel San Miguel que generalmente se guarda en la iglesia de la Soledad.</p>
+
+<p align="left">Dicha celebración en ocasiones coincide con la festividad del Hey Atlixcayotl que se realiza el último domingo de septiembre lo que hace más grande la fiesta.</p>
+</div>
+</div>
+
+<div data-role="collapsible" data-content-theme="false">
+<h1>Ex-Convento del Carmen</h1>
+<div>
+<p>La segunda fundación de religiosos que tuvo lugar en Atlixco fue la de los carmelitas. Llegaron el 28 de septiembre de 1589.
+Su arquitectura sobria y de gran sencillez relaciona este convento con el de San Ángel en la ciudad de México.</p>
+
+  <div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image28','','imagenes/descarga.png',1)"><img src="imagenes/4487082401_b693a25c25.png" width="298" height="397" id="Image"></a>
+  </div>
+  <p>La Iglesia y Convento del Carmen debió ser el edificio religioso más importante de Atlixco. Limitado por enorme barda, abarca aproximadamente dos manzanas, comprendió como todos los edificios de la misma orden un claustro pequeño, uno o dos claustros grandes, huerta, dependencias e iglesia anexa a todo el convento.</p>
+La construcción del Convento y su Iglesia data de 1600 a 1620. La Iglesia esta orientada de norte a sur, a este lado la fachada principal. Flanqueada por dos contrafuertes, es un ejemplo del estilo barroco de la primera mitad del Siglo XVII. La puerta alta y estrecha, está enmarcada por dos pilastras almohadilladas, en el entablamiento una inscripción: “SOLI DEO HONOR & GLORIA”.</p>
+<p>Al extremo, a los lados, hay dos pequeñas capillas. Las pilastras que dividen a la nave están hechas de piedra negra y hay todavía restos de decoración del siglo XVII en colores y parte del siglo XIX como el casetón de la bóveda en azul, blanco y negro. Con casetones podemos ver las pilastras y los arcos que sustentan las cúpulas y en las bóvedas tanto de los cruceros como de la capilla mayor. A los lados del presbiterio se encuentran las dos pequeñas capillas que servían para relicarios y que vemos en todas las iglesias Carmelitas.</p>
+<p>En el claustro el que recibía a los peregrinos y se encargaba de darles de comer a ellos y a sus caballos se le llamaba frijolero o racionero.</p>
+<p>La reforma liberal acabó con este monasterio. Los religiosos fueron exclaustrados en los años de 1853 y en 1867, sus bienes fueron vendidos; la Iglesia fue despojada de todas las obras de arte que había reunido varias generaciones.</p>
+<p>Actualmente sus instalaciones han acogido recitales de la Escuela de Música Normalista Estado de Puebla, entre otros eventos de talla internacional en la parte restaurada ahora conocida como Centro Cultural del Carmen, sigue en restauración, además  cuenta con un Museo de piezas arqueológicas de la región.</p>
+</div>
+</div>
+
+<div data-role="collapsible" data-content-theme="false">
+<h1>Ex-convento de San Francisco</h1>
+<div>
+<p align="left">El ex-convento franciscano de Santa María de Jesús se ubica en el cerro de San Miguel, lugar ceremonial donde se celebra el Huey Atlixcayotl. Data del siglo XVI. Construido en dos periodos, el primero abarca de 1538 a 1550, el segundo de 1560 a 1620. Perteneció a los franciscanos, dedicado a evangelizar a los indígenas de la región. El conjunto arquitectónico lo forman un gran atrio, el templo y el convento. Tiene una puerta atrial con dos arcos y en la fachada los nichos del vía crucis. A mediados del siglo XIX fueron colocados en el templo parte de los bienes muebles de la iglesia del Carmen destacando entre ellos el retablo mayor que es considerado como uno de los más bellos que se ejecutaron en la Nueva España durante el siglo XVII.</p>
+<p align="left">Es la primera fundación franciscana en el lugar que en el momento de la conquista española se llamó Acapetlahucán, que quiere decir; “lugar donde se hacían esteras de caña seca”, ubicada en las faldas del ahora cerro de San Miguel.
+Es durante el gobierno de la primera audiencia que fray Toribio de Benavente, “Motolinia”, funda entre los años de 1551 y 1562 el templo en una congregación de indios que había ayuntado fray Alonso de Buendía y lo dedica a la Visitación de Nuestra Señora.
+Cuentan con guía.</p>
+<div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image28','','imagenes/3396196146_c3183bcf82_b.png',1)"><img src="imagenes/58c14d04ea7d9b2910e24aef05b926e1_XL.png" width="412" height="257" id="Image2"></a></div>
+</div>
+</div>
+  <div data-role="footer" data-theme="a" data-position="fixed">
+  <h4>"Turismo de Atlixco"</h4>
+  </div>
+  </div>
+  </div>
+ 
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>Floricultural</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+<!-- Start WOWSlider.com -->
+<iframe src="visor/visorflor.html" style="width:640px;height:360px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+ <p>Hoy la región produce cada año 10 millones de plantas de ornato</p>
+ <p>A partir de la década de los 60, a raíz de la debacle de la industria textil en la región de Atlixco, surgió con intensidad la actividad del cultivo de la flor y arroz para reactivar la economía, En los años 90 cobra auge con crecimientos anuales del 200 por ciento para que en la actualidad  esta zona  templada del estado registre una producción de 10 millones de plantas de ornato al año.</p>
+ <p>Es más, Atlixco figura en el mapa como una de las principales regiones del país productoras de flor de Nochebuena, informó Jesús Ramírez, director de Desarrollo Agropecuario del ayuntamiento, al anunciar la Expo Flor  que se realizará del 11 al 20 de Julio en el recinto ferial.</p>
+<p> El  funcionario municipal destacó que la floricultura ha sido la alternativa de empleo que puso en una tabla de salvación a miles de habitantes de la región que en los años 60 tenían como fuente de ingresos la entonces pujante industria textil.</p>
+<p>Hoy son más de 2 mil productores dedicados a producir la flor de  corte (ornamental) y plantas en maceta.</p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a" data-position="fixed">
+ <h4>"Turismo de Atlixco"</h4>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Tradiciones</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <h2>Atlixcáyotl</h2>
+ <p align="left"> Patrimonio Cultural del Estado de Puebla</p>
+<p align="left">Significa “gran atlixquedad”, en este gran evento se reúnen 11 regiones etnogeográficas y 7 grupos de etnias del Estado de Puebla.</p>
+<p align="left">Atlixcáyotl es la máxima fiesta de Atlixco y la segunda más importante a nivel Nacional, expresión de convivencia donde se observa, se aprecia y se disfruta la forma de vestirse, hablar, cantar, bailar y la manera de agradecerle a la naturaleza por los beneficios obtenidos de ella por parte de los participantes.</p>
+<p align="left">Donde las danzas mas esperadas son la del  Calabazeado de Atlixco, los Tecuanes de Acatlan de Osorio y el rito de los Voladores de la Sierra de Puebla.</p>
+<img src="imagenes/101506.png">
+<p align="left">El festival está acompañado de un convite que se realiza un domingo previo donde se recorren los principales templos de la ciudad y al bailar  por las calles las chinas Atlixqueñas entregan una banderita hecha de papel picado que significa la invitación a la gran fiesta y los charros a pie reparten el mezcal, que lo llevan en una botella adornada de flores de papel china y  de su morral sacan canutos hechos de carrizo, donde sirven el mezcal dándole un sabor especial y esto se convierte en una gran fiesta que termina en los balcones de la Presidencia Municipal, donde las mujeres suben a compartir los dulces y frutas de la region que llevan en sus canastas, esto se realiza el  tercer domingo de septiembre.</p>
+<p align="left">Un sábado antes del festival del Huey Atlixcayotl se realiza dos eventos:</p>
+<p align="left">La peregrinación de los Danzantes hacia la Ermita de San Miguel para dar gracias por haber llegado con bien desde sus lugares de origen, quienes algunos realizan viajes de 8 horas para participar en la Gran Fiesta.</p>
+<p align="left">La Elección de la Xochiccihuatl  se realiza un día antes al Huey Atlixcayotl de las 11 etnias que participan y que a través de un jurado se elige a la mujer flor la cual representa  los rasgos autóctonos o indígenas, una lengua materna y porta un traje o indumentaria de diario, preservando su cultura y tradición, quien sera enflorada con una corona por la máxima autoridad del evento y donde ella le hará la entrega el bastón de mando misma que lo acompañara a disfrutar dicho Evento, que se realiza en el cerro de San Miguel (Popocatica o Macuilxochitepetl) desde Netotiloyan (plazuela de la danza)  el último domingo de septiembre.
+</p>
+ </div>
+ <div>
+ <h2>Atlixcayotontli</h2>
+<img src="imagenes/-fototeca-210920141208imgpng21SEP2014Convite05-25092014-180849.png" width="445" height="297">
+ <p align="left"> Es el inicio de la Gran Fiesta es por ello que se le llama “La fiesta chica de la gran familia Atlixquense”, tiene lugar en el Cerro de San Miguel dos fines de semana antes del Huey Atlixcáyotl; es decir, el segundo domingo del mes de Septiembre. En ella se reúnen danzantes de las tres regiones que convergen La Región del Valle, La Región de La Tierra Caliente y la Región de los Volcanes (también conocida como la región de la Sierra Nevada).</p>
+<p align="left">Este año Huaquechula y Los Tecuanes serán los invitados a la fiesta, si quieres participar el convite será este domingo 30 de agosto, en el Parque del Ahuehuete a las 10:00 de la mañana.</p>
+ </div>
+  <div>
+ <h2>Feria de la Cecina</h2>
+<img src="imagenes/MG_4085.png" width="416" height="277">
+ <p align="left"> Representativa de la gastronomía tradicional de la región de Atlixco, se distingue por su mezcla de texturas, colores, olores y sabores.  La forma más clásica de comer la Cecina Atlixquense, es en el famoso “taco placero”, en el cual la cecina es asada al carbón, lo que permite disfrutar de la suavidad de este producto, acompañándola con aguacate, queso fresco, ensalada de nopales y chiles en vinagre. Esta feria se lleva a cabo cada año a finales del mes de Julio y principios del mes de agosto.</p>
+ </div>
+  <div>
+ <h2>Desfile de Calaveras</h2>
+ <p align="left"> El 02 de Noviembre la Ciudad de Atlixco se viste de calaveras para recorrer las principales calles en un festivo y colorido desfile que busca preservar y rescatar nuestras tradiciones populares.</p>
+<img src="imagenes/deesfilecalaveras03.png" width="398" height="265">
+<p align="left">Los jóvenes salen recorriendo las principales calles de la ciudad donde ataviados de trajes típicos o cualquier otra vestimenta llevan sus caras pintadas de calaveras o con mascara de alucivas a dicho personaje mitológico de México.</p>
+<P align="left">El desfile tiene la finalidad de respetar y conservar la tradición del día de muertos y dejar a un lado el famoso “Halloween” o “Noche de brujas”</P>
+ </div>
+  <div>
+ <h2>Feria de la Nochebuena</h2>
+<img src="imagenes/inauguran-feria-de-la-nochebuena-en-atlixco.png" width="434" height="289">
+ <p align="left"> A partir del último viernes de Noviembre los mejores productores de la región exponen y venden una variedad enorme de plantas de Nochebuena que son producidas en los viveros de la zona de Cabrera, así como del corredor gastronómico a precios competitivos en mayoreo y menudeo concentrados en el Recinto Ferial de Atlixco.</p>
+<p align="left">En Atlixco, existen a la fecha 52 productores de Nochebuenas en una superficie de 25 hectáreas, que generan 800 empleos directos, siendo el sustento de poco más de 800 familias. Esta actividad empezó prácticamente hace 20 años dentro del estado y producían aproximadamente 6 mil plantas, en ese entonces.</p>
+ </div>
+  <div>
+ <h2>Villa Iluminada</h2>
+<img src="imagenes/emprenden-operativo-villa-iluminada-atlixco.png" width="411" height="308">
+ <p align="left"> La “Villa Iluminada” es un recorrido que resalta la belleza arquitectónica de este municipio, embelleciéndola con luz. Se presenta a finales de noviembre y hasta el 6 de enero.</p>
+<p align="left">Durante más de cuarenta días las calles forman un circuito de luz y color, vestidas de figuras y escenas alusivas a la navidad, las tradiciones y la identidad de Atlixco.</p>
+<p align="left">Los edificios antiguos serán engalanados con luces, lo que destacará su bella arquitectura y valor histórico.</p>
+<p align="left">Además, se presentan actividades de distinta índole, como son:</p>
+<div align="left">
+  <ul>
+    <li>Artísticas
+    <li>Culturales
+    <li>Deportivas
+    <li>Stands de Flores
+          <li>Artesanías
+        </ul>
+</div>
+<ul>
+</ul>
+ </div>
+  <div>
+ <h2>Fiesta de Reyes</h2>
+ <p align="left"> Es un majestuoso desfile de 5 km de largo en el que más de 15 carros alegóricos, comparsas y bandas locales recorren las calles principales de la Ciudad. Los reyes magos visitan Atlixco el 5 de Enero gracias a que los niños hacen un Festival de la Ilusión en el que les piden que no se olviden de los más necesitados. Con asistencia de más de 60 mil espectadores la Fiesta de Reyes es desde hace mas de 18 años, un evento que involucra a gran parte de la comunidad del Municipio. ¡¡¡Cada año nuevos  carros alegóricos!!! VEN Y DISFRÚTALO</p>
+ <img src="imagenes/11-1024x682.png" width="471" height="313">
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a" data-position="fixed">
+ <h4>"Turismo de Atlixco"</h4>
+ </div>
+ </div>
+ </div>
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Gastronomia</h1>
+ </div>
+ 
+ <div data-role="collapsible" data-content-theme="false">
+<h1>Comida Típica</h1>
+<div align="center">
+<h2>Cecina</h2>
+<img src="imagenes/20120426-203436-mexican-essential-la-casa-de-samuel-cecina.png" width="266" height="199">
+<p>Un platillo por el que después de probarlo querrás volver Atlixco, la tradicional cecina de Atlixco, elaborado por cecineros del municipio de manera artesanal este platillo es básico dentro de la cocina atlixquense, acompañado de sus guarniciones de queso, aguacate y nopales.</p>
+</div>
+<div align="center">
+<h2>Taco Placero</h2>
+<img src="imagenes/tacos_acorazados.png" width="328" height="245">
+<p>Mejores no encontraras en Atlixco rellenos de cualquier guisado simple, combinado o no con una dosis de arroz a la mexicana; los hay de chicharrón prensado, tinga, huevos duros, nopales con huevo, longaniza con papas, chicharrón guisado en salsa verde o roja, bistec con nopales, costilla de puerco en adobo, entre otros.</p>
+</div>
+<div align="center">
+<h2>Enchiladas</h2>
+<img src="imagenes/enchiladas_verdes_puerco.png" width="318" height="211">
+<p>Los rollitos que se forman uno tras otro para cubrirse de una delicada salsa. Rellenas de pollo, bañadas en salsa verde, roja o mole que se acompañan de lechuga, aguacate, crema, queso, rábano y cebolla, listos para degustarse calientitos y bien bañaditos.</p>
+</div>
+<div align="center">
+<h2>Barbacoa</h2>
+<img src="imagenes/barbacoa.png" width="317" height="211">
+<p>El estilo de carne con un sabor inigualable que te hará chupar los dedos.
+La carne de borrego hecha en barbacoa es uno de los estilos de popularidad en el centro del país. Elaborada dentro de la tierra con hojas de maguey alcanza su mejor punto en sabor; lo puedes preparar en taco o simplemente con una rica salsa y aguacate. No olvides el consomé que se produce al cocinar la barbacoa.</p>
+</div>
+<div align="center">
+<h2>Mole Poblano</h2>
+<img src="imagenes/585942_mole_poblano.png" width="351" height="197">
+<p>El platillo por excelencia en fiestas coloniales que muestra la creatividad de las familias poblanas, delicioso mole dulce representativo de Puebla, está hecho a base de varios chiles y condimentos, agregando una caricia de chocolate. Su consistencia espesa se acompaña comúnmente de una pieza de guajolote o pollo y se agrada a la vista decorándolo con ajonjolí tostado.</p>
+</div>
+<div align="center">
+<h2>Mole de Olla</h2>
+<img src="imagenes/mole de olla.png" width="324" height="243">
+<p>Suculento caldo hecho a base de carne de res, sazonado en salsa de jitomate con chile costeño y perfumado con ramas de cilantro. Este platillo se acompaña de ejotes y calabacitas para servirse caliente en un plato al que se le agrega como toque final el jugo de limón al gusto.</p>
+</div>
+<div align="center">
+<h2>Mole de Panza</h2>
+<img src="imagenes/p51bb51dhncm.png">
+<p>Este caldoso plato hecho con panza se puede encontrar en negocios de antojitos mexicanos o fondas de nuestra bella ciudad.</p>
+</div>
+<div align="center">
+<h2>Chile en nogada</h2>
+<img src="imagenes/chiles-en-nogada.png" width="467" height="217">
+<p>Platillo de temporada que envuelve parte de la historia y triunfo de nuestro México.
+  Representativo del estado de Puebla, tiene su origen en los tiempos de Independencia en homenaje a Agustín de Iturbide. Los colores de la bandera se aprecian con armonía y perfección en este manjar por los meses de julio y agosto, ya que sus ingredientes que utilizan para el relleno se producen solo en esta temporada.</p>
+</div>
+</div>
+<div data-role="collapsible" data-content-theme="false">
+<h1>Antojitos</h1>
+<div align="center">
+<h2>Cemitas</h2>
+<img src="imagenes/20090cm-300x225.png">
+<p>Un crujiente y dorado pan redondo con ajonjolí en decoración es la cubierta de ingredientes comunes como el quesillo, pápalo, chipotle, cebolla, aguacate, aceite de olivo y según el gusto milanesa, “carnitas”, pata, jamón o carne enchilada que en conjunto dan origen al suculento plato de la región similar a la torta.</p>
+</div>
+<div align="center">
+<h2>Chalupas</h2>
+<img src="imagenes/chalupas_poblanas.png" width="378" height="191">
+<p>Las chalupas son tortillas fritas cubiertas de salsa, cebolla y carne de res/puerco/pollo deshebrada con salsa roja o verde, una verdadera delicia.</p>
+</div>
+<div align="center">
+<h2>Pambazos</h2>
+<img src="imagenes/pambazo.png" width="377" height="251">
+<p>Te gusta el pan, pues este es un pan completamente liso parecido a la telera (bollo) rellena de chorizo o longaniza y posteriormente bañada en salsa de chile guajillo o ancho, listo para satisfacer tu paladar.</p>
+</div>
+<div align="center">
+<h2>Molotes</h2>
+<img src="imagenes/6307563699_37beb8ebd7_b.png" width="355" height="223">
+<p>Son una derivación de las gorditas, quesadillas o empanadas cerradas. Los molotes son hechos a mano con masa de maíz que según el gusto se puede rellenar con papa, sesos, queso, requesón o tinga, para después freírse y disfrutar de su crujiente sabor y en Atlixco son toda una tradición.</p>
+</div>
+<div align="center">
+<h2>Tostadas</h2>
+<img src="imagenes/Receta-de-Tostadas-de-Pollo.png" width="343" height="192">
+<p>Este es un antojito que se aprecia por su fácil preparación y gran satisfacción en su sabor, siendo una sencilla tortilla frita se perfecciona añadiendo frijoles, lechuga, queso, crema, salsa y complementando su mismo nombre, un ingrediente electo por su degustador, el cual puede ser pollo, lengua, pata o quesillo.</p>
+</div>
+<div align="center">
+<h2>Tamales</h2>
+<img src="imagenes/images.png">
+<p>De Comino tradicional de la región de Atlixco, elaborado con maíz, jitomate y guajillo para la salsa, manteca y cominos el cual le da ese sabor muy especial.
+De canario, Estos tamales se preparan con harina de arroz, mantequilla, azúcar y yemas de huevo. Es una receta diferente a la de los tamales tradicionales.</p>
+</div>
+<div align="center">
+<h2>Atole de Cacauhate</h2>
+<img src="imagenes/champ1.png" width="293" height="206">
+<p>El gusto por el atole recibe una recompensa con este de cacahuate, que aporta algo diferente. Ideal para comer unos tamales, e incluso un pan de agua, hojaldra o cuernitos. Claro es para una reunión familiar o fiesta, elaborado con masa, leche y cacahuate</p>
+</div>
+<div align="center">
+<h2>Esquites y Elotes</h2>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image19','','imagenes/esquites.png',1)"><img src="imagenes/elote.png" width="242" height="242" id="Image19"></a>
+<p>Muy populares en todo el país la palabra esquites son los granos del elote hervidos en agua con sal, epazote y otras hierbas de olor, servidos en un vaso, se toman calientes y con cuchara, y normalmente se les agrega jugo de limón, chile, y sal. Se le puede agregar mayonesa o crema y queso canasta rallado.
+  De una olla enorme de agua muy caliente y valiéndose de grandes tenazas extrae una pieza de maíz cocido a la perfección, la sacude para quitarle el exceso de agua y le inserta un palito de madera para poderla agarrar. Después prepara el elote al gusto del cliente con mayonesa, queso rallado, sal, limón, chile en polvo… El comprador come su elote primero con los ojos en anticipación de la primera probada — misma que le mancha la barba y los cachetes de todo lo que cubre al maíz. ¡Ay, qué rico! El cliente se va caminando y comiendo, feliz como una lombriz.</p>
+</div>
+</div>
+ </div>
+ </div>
+ </div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+ <h4>"Turismo de Atlixco"</h4>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Datos Personales</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+  <h2>Centro de Bachillerato Tecnologico industrial y de sevicios N°.16</h2>
+ <h3>Especialidad: Programacion</h3>
+  <h3>4° "G"</h3>
+   <h3>Materia:Desarrolla Aplicaciones Moviles</h3>
+ <h3>Profesor:Jose Antonio Gómez Hernández</h3>
+ <h3>Aplicacion hecha por: Luis Fernando Rugerio Herrera</h3>
+ </div>
+ <div data-role="footer" data-theme="a" data-position="fixed">
+ <h4>"Turismo de Atlixco"</h4>
+ </div>
+ </div>
+ </div>
+
+</body>
+</html>
